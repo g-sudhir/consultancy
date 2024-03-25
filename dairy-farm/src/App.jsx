@@ -7,6 +7,7 @@ import Nav from './components/Nav/Nav'
 import Products from './components/Products/Products'
 import Home from './components/Home/Home'
 import Footer from './components/Footer/Footer'
+import Contact from './components/Contact/Contact'
 function App() {
 
   return (
@@ -17,12 +18,10 @@ function App() {
       <Route index element={<Home/>}></Route>
       <Route path="/home" element={<Home/>}/>
       <Route path="/product" element={<Products/>}/>
+      <Route path="/contact" element={<Contact/>}/>
       </Routes>
      <Footer/>
     </BrowserRouter>
-     {/* <Nav/>
-     <Home/>
-     <Products/> */}
     </>
   )
 }

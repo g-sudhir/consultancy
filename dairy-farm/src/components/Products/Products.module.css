@@ -9,11 +9,13 @@
 }
 .product{
     margin: 3rem 0;
-    display: flex;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,30%);    
     justify-content: center;
     align-items: center;
-    gap:4.5rem;
-    width: 100%;
+    row-gap: 3rem;
+
 }
 
 .section_title{

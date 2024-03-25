@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+#contact_section{
+    width: 100%;
+    height: 10%;
+    position: relative;
+    display: block;
+}
+
+
+.contact_title{
+    display: inline-block;
+    margin: 1rem 0;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    left: 50%;
+    transform: translate(-36px);
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 0.2rem;
+    border-bottom: 0.2rem solid #EEC759;
+}
+
+.labels{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+.form{
+    margin: 3rem auto;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    background-color: #EEC759;
+    padding: 4rem 2rem;
+    border-radius: 50px;
+}
+.form > .field{
+   margin: 0.5rem auto;
+}
+.field{
+    display: flex;
+    gap: 3rem;
+}
+.field > input{
+    outline: none;
+    border: none;
+    padding:0.4rem 0;
+    width: 13rem;
+    border-radius: 50px;
+    padding-left: 0.5rem;
+}
+.field > .subject{
+    transform: translate(-10px);
+}
+.field > textarea{
+    outline: none;
+    border: none;
+    padding:0.4rem 0;
+    width: 13rem;
+    height: 7rem;
+    padding-left: 1rem;
+    border-radius: 30px;
+    transform: translate(-20px);
+}
+.form > button{
+    padding: 0.5rem 1rem;
+    width: 10rem;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: #53CC9A;
+    transition: background-color 0.5s;
+}
+.form > button:hover{
+    background-color: #20e895;
+}
