@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: center;
     width:70%;
-    height: calc(100vh/1.7);
+    height: calc(100vh/1.5);
     border-radius: 10px;
     background: #ffffff;
     box-shadow:  5px 5px 60px #bebebe,

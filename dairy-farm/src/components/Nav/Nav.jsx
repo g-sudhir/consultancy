@@ -1,22 +1,38 @@
-import './Nav.css';
-import { Link } from 'react-router-dom'
-export default function Nav(){
-    return(
-        <header>
-        <div class="container">
-            <div class="item-1">
-                <img/>
-                <h2>SARAVANA DAIRY FARM</h2>
-            </div>
-            <div class="item-2">
-                <nav class="nav-bar">
-                    <Link to="/home">HOME</Link>
-                    <Link to="/product">PRODUCT</Link>
-                    <Link to="/contact">CONTACT</Link>
-                    <Link to="/about">ABOUT</Link>
-                </nav>
-            </div>
-        </div>
-    </header>
-    );
+// Nav.js
+import "./Nav.css";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+
+export default function Nav() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <nav>
+      <h2>SARAVANA DAIRY FARM</h2>
+      <div className="menu" onClick={()=>{
+        setMenuOpen(!menuOpen);
+      }}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      {/* <button className="menu-button">
+         &#9776;
+          </button> */}
+      <ul className={menuOpen ? "open":""}>
+        <li>
+          <Link to="/home">HOME</Link>
+        </li>
+        <li>
+          <Link to="/product">PRODUCT</Link>
+        </li>
+        <li>
+          <Link to="/contact">CONTACT</Link>
+        </li>
+        <li>
+          <Link to="/about">ABOUT</Link>
+        </li>
+      </ul>
+    </nav>
+  );
 }

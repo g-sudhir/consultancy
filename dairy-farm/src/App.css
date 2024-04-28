@@ -44,3 +44,34 @@
 .read-the-docs {
   color: #888;
 } */
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* This will hide horizontal overflow */
+}
+
+.container {
+  max-width: 100%;
+  overflow: hidden; /* This will prevent content from overflowing its container */
+}
+
+/* Resetting margins and paddings */
+h2, .container, .footer {
+  margin: 0;
+  padding: 0;
+}
+
+/* Adjusting widths */
+.container, .footer {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Removing any potential overflow */
+.container, .footer {
+  overflow: hidden;
+}
