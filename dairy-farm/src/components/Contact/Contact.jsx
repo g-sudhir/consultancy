@@ -24,7 +24,7 @@ const Contact = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:4000/contact",
+        `${process.env.REACT_APP_BACKEND_URL}/contact`,
         formData
       );
       console.log(response.data);

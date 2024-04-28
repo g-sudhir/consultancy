@@ -5,7 +5,7 @@ import { data } from "../../data.js";
 export default function Products() {
   const [product,allproduct] = useState([]);
  
-  fetch('http://localhost:4000/allproducts')
+  fetch(`${process.env.REACT_APP_BACKEND_URL}/allproducts`)
     .then((res)=>res.json())
     .then((data)=>{
       allproduct(data);
