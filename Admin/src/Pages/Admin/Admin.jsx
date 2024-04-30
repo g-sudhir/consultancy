@@ -68,13 +68,15 @@ import AddProduct from '../../Components/AddProduct/AddProduct';
 import ListProduct from '../../Components/ListProduct/ListProduct';
 import Order from '../../Components/Orders/Order';
 import Customer from '../../Components/Customer/Customer';
+import Navbar from '../../Components/Navbar/Navbar';
 
-const Admin = () => {
+const Admin = ({onLogout}) => {
   const [isLoggedIn, setIsLoggedIn] = useState(true); // Sample isLoggedIn state
 
   const handleLogout = () => {
     // Implement logout functionality
     setIsLoggedIn(false);
+    onLogout(false);
   };
 
   if (!isLoggedIn) {
@@ -83,6 +85,8 @@ const Admin = () => {
   }
 
   return (
+    <div>
+      <Navbar />
     <div className='admin'>
       <Sidebar />
       <button onClick={handleLogout} style={styles.logoutButton}>Logout</button>
@@ -96,6 +100,7 @@ const Admin = () => {
         </Route>
       </Routes>
     </div>
+</div>
   );
 };
 

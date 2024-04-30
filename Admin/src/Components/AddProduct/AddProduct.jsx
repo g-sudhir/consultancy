@@ -65,7 +65,7 @@ const AddProduct = () => {
       // product.image = responseData.image_url;
       // console.log(product);
       product.image= image;
-      await fetch('http://localhost:4000/addproduct', {
+      await fetch(`https://consultancy-1.onrender.com/addproduct`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',

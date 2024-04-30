@@ -9,10 +9,10 @@ import { Navigate } from 'react-router-dom';
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+  
   const handleLogin = async (username, password) => {
     try {
-      const response = await fetch('http://localhost:4000/login', {
+      const response = await fetch(`https://consultancy-1.onrender.com/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -31,7 +31,9 @@ const App = () => {
       console.error('Login error:', error);
     }
   };
-
+   const handleLogout = (value) => {
+    setIsLoggedIn(value);
+   }
   if (!isLoggedIn) {
     return <Login onLogin={handleLogin} />;
   }
@@ -39,8 +41,7 @@ const App = () => {
   return (
     <div>
       <OrdersProvider>
-        <Navbar />
-        <Admin/>
+        <Admin onLogout={handleLogout}/>
       </OrdersProvider>
     </div>
   );
