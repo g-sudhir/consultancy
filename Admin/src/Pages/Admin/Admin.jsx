@@ -73,10 +73,10 @@ import Navbar from '../../Components/Navbar/Navbar';
 const Admin = ({onLogout}) => {
   const [isLoggedIn, setIsLoggedIn] = useState(true); // Sample isLoggedIn state
 
-  const handleLogout = () => {
+  const handleLogout = (value) => {
     // Implement logout functionality
-    setIsLoggedIn(false);
-    onLogout(false);
+    setIsLoggedIn(value);
+    onLogout(value);
   };
 
   if (!isLoggedIn) {
@@ -86,10 +86,10 @@ const Admin = ({onLogout}) => {
 
   return (
     <div>
-      <Navbar />
+      <Navbar handleLog={handleLogout}/>
     <div className='admin'>
       <Sidebar />
-      <button onClick={handleLogout} style={styles.logoutButton}>Logout</button>
+     
       {/* Logout button */}
       <Routes>
         <Route path='/addproduct' element={<AddProduct />}></Route>
@@ -104,20 +104,6 @@ const Admin = ({onLogout}) => {
   );
 };
 
-const styles = {
-  logoutButton: {
-    padding: '10px 20px',
-    fontSize: '16px',
-    backgroundColor: '#dc3545', // Bootstrap danger color
-    color: '#fff',
-    border: 'none',
-    borderRadius: '4px',
-    width: '10rem',
-    cursor: 'pointer',
-    marginTop: '-70px',
-    // marginLeft: '-200px', 
-    height: '40px'
-  },
-};
+
 
 export default Admin;
