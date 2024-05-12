@@ -34,8 +34,8 @@ const Contact = () => {
     }
 
     // Check if any of the  fields are empty
-    const Fields = ["name", "email", "phone", "subject", "description"];
-    const emptyFields = Fields.filter((field) => !formData[field].trim());
+    const requiredFields = ["name", "email", "phone", "subject", "description"];
+    const emptyFields = requiredFields.filter((field) => !formData[field].trim());
 
     if (emptyFields.length > 0) {
       alert(`Please fill in the following fields: ${emptyFields.join(", ")}`);
