@@ -20,7 +20,9 @@
 /* Responsive design */
 @media (max-width: 480px) {
     .product {
-         grid-template-columns: repeat(2, 50%); /*Show two products in a row on smaller devices */
+        margin-left: 15%;
+         text-align: center;
+         grid-template-columns: repeat(1, 100%); /*Show two products in a row on smaller devices */
     }
 }
 
@@ -29,7 +31,7 @@
     margin: 1rem 0;
     font-family: "Poppins", sans-serif;
     position: relative;
-    left: 50%;
+    left: 45%;
     transform: translate(-36px);
     font-weight: 600;
     font-size: 1.5rem;

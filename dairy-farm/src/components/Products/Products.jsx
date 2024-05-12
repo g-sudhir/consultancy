@@ -4,12 +4,12 @@ import style from "./Products.module.css";
 import { data } from "../../data.js";
 export default function Products() {
   const [product,allproduct] = useState([]);
- 
-  fetch(`${process.env.REACT_APP_BACKEND_URL}/allproducts`)
-    .then((res)=>res.json())
-    .then((data)=>{
-      allproduct(data);
-    });
+  fetch(`https://consultancy-1.onrender.com/allproducts`)
+  .then((res)=>res.json())
+  .then((data)=>{
+    allproduct(data);
+  });
+  
 
 
   return (
