@@ -33,9 +33,9 @@ const Contact = () => {
       return;
     }
 
-    // Check if any of the required fields are empty
-    const requiredFields = ["name", "email", "phone", "subject", "description"];
-    const emptyFields = requiredFields.filter((field) => !formData[field].trim());
+    // Check if any of the  fields are empty
+    const Fields = ["name", "email", "phone", "subject", "description"];
+    const emptyFields = Fields.filter((field) => !formData[field].trim());
 
     if (emptyFields.length > 0) {
       alert(`Please fill in the following fields: ${emptyFields.join(", ")}`);
@@ -70,7 +70,7 @@ const Contact = () => {
           name="name"
           value={formData.name}
           onChange={handleChange}
-          required
+          
         />
       </div>
 
@@ -83,7 +83,7 @@ const Contact = () => {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          required
+          
         />
       </div>
 
@@ -96,7 +96,7 @@ const Contact = () => {
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          required
+          
         />
       </div>
 
@@ -110,7 +110,7 @@ const Contact = () => {
           value={formData.subject}
           onChange={handleChange}
           className={styled.subject}
-          required
+          
         />
       </div>
 
@@ -124,7 +124,7 @@ const Contact = () => {
           name="description"
           onChange={handleChange}
           value={formData.description}
-          required
+          
         ></textarea>
       </div>
 
